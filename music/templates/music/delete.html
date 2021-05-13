@@ -1,0 +1,17 @@
+{% extends 'music/master1.html' %}
+{% block title %}
+Delete
+{% endblock %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<img src="{{ object.image.url }}" height="200px" width="200px">
+<h2>{{ object.title }}</h2>
+<p>
+    <h3>Process to Delete</h3>
+    <input type="submit" value="Yes" class="btn btn-primary">
+    <a href="#" class="btn btn-primary">No</a>
+</p>
+
+</form>
+{% endblock %}
